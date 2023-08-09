@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percentage Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i>PERCENTAGE CALCULATOR</i></h1><br>
+        <input text="number" placeholder="Tamil" id="tam"><br><br>
+        <input text="number" placeholder="English" id="eng"><br><br>
+        <input text="number" placeholder="Mathematics" id="mat"><br><br>
+        <input text="number" placeholder="Science" id="sci"><br><br>
+        <input text="number" placeholder="Social Science" id="ss"><br><br>
+        <button onclick="cal()"><i>CALCULATE</i></button><br><br>
+        <h3><i>Your % is <span id="output1"></span></i></h3>
+    </div>
+    <script>
+         function cal()
+         {
+            let t=parseInt(document.getElementById("tam").value);
+            let e=parseInt(document.getElementById("eng").value);
+            let m=parseInt(document.getElementById("mat").value);
+            let s=parseInt(document.getElementById("sci").value);
+            let soci=parseInt(document.getElementById("ss").value);
+            let total=(t + e + m + s + soci)/5;
+            document.getElementById("output1").innerHTML=total;
+         }
+    </script>
+</body>
+</html>
